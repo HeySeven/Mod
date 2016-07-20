@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>我问</title>
-    <link rel="stylesheet" href="weui/weui.css">
+    <title>我答</title>
+    <link rel="stylesheet" href="../weui/weui.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1468335717_092201.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="plugins/fastclick.min.js"></script>
-    <script src="plugins/adaptive-version2.js"></script>
-    <script src="weui/weui.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/fastclick.min.js"></script>
+    <script src="../plugins/adaptive-version2.js"></script>
+    <script src="../weui/weui.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
 <div class="container">
-    <div class="weui_cells_title">已提问 2</div>
+    <div class="question-tab">
+        <ul>
+            <li>待回答</li>
+            <li class="active">全部</li>
+        </ul>
+    </div>
     <div class="question-wrap">
-        <a href="#" class="cell-media-box cell-question-box question-box-2">
-            <div class="media-question-box">
-                <div class="media-nobg">
-                    娱乐圈有哪些不为人知的潜规则？是不是没有关系就一定无法成名？
-                </div>
+        <div class="no-msg-wrap">
+            <i class="iconfont icon-biaoqingwunai1-copy"></i>
+            <p>还没有人点你坐台哦，<br>
+                快分享你的页面让大家提问吧~</p>
+            <div class="content-f-c">
+                <a href="#" class="btn btn-danger">去我的页面</a>
             </div>
+        </div>
+
+        <!--<a href="#" class="cell-media-box cell-question-box">
             <div class="weui_media_box weui_media_appmsg">
                 <div class="weui_media_hd">
                     <img class="weui_media_appmsg_thumb"
@@ -36,6 +45,11 @@
                 <div class="money-btn">￥10</div>
                 <div class="question-status">已回答</div>
             </div>
+            <div class="media-question-box">
+                <div class="media-nobg">
+                    娱乐圈有哪些不为人知的潜规则？是不是没有关系就一定无法成名？
+                </div>
+            </div>
             <div class="media-box">
                 <div class="media-control">
                     <div class="pull-right control-dz">
@@ -45,12 +59,7 @@
                 </div>
             </div>
         </a>
-        <a href="#" class="cell-media-box cell-question-box question-box-2">
-            <div class="media-question-box">
-                <div class="media-nobg">
-                    娱乐圈有哪些不为人知的潜规则？是不是没有关系就一定无法成名？
-                </div>
-            </div>
+        <a href="#" class="cell-media-box cell-question-box">
             <div class="weui_media_box weui_media_appmsg">
                 <div class="weui_media_hd">
                     <img class="weui_media_appmsg_thumb"
@@ -61,35 +70,13 @@
                     <h4 class="weui_media_title"><b>墨小鸡</b></h4>
                 </div>
                 <div class="money-btn">￥10</div>
-                <div class="question-status">已回答</div>
+                <div class="question-status text-danger">待回答</div>
             </div>
-            <div class="media-box">
-                <div class="media-control">
-                    <div class="pull-right control-dz">
-                        1人窃听
-                    </div>
-                    几秒前
-                </div>
-            </div>
-        </a>
-        <a href="#" class="cell-media-box cell-question-box question-box-2">
             <div class="media-question-box">
                 <div class="media-nobg">
                     娱乐圈有哪些不为人知的潜规则？是不是没有关系就一定无法成名？
                 </div>
             </div>
-            <div class="weui_media_box weui_media_appmsg">
-                <div class="weui_media_hd">
-                    <img class="weui_media_appmsg_thumb"
-                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg=="
-                         alt="">
-                </div>
-                <div class="weui_media_bd">
-                    <h4 class="weui_media_title"><b>墨小鸡</b></h4>
-                </div>
-                <div class="money-btn">￥10</div>
-                <div class="question-status">已回答</div>
-            </div>
             <div class="media-box">
                 <div class="media-control">
                     <div class="pull-right control-dz">
@@ -98,7 +85,7 @@
                     几秒前
                 </div>
             </div>
-        </a>
+        </a>-->
     </div>
 
 </div>

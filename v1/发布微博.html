@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>回答页</title>
-    <link rel="stylesheet" href="weui/weui.css">
+    <title>发布微博</title>
+    <link rel="stylesheet" href="../weui/weui.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1468335717_092201.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="plugins/fastclick.min.js"></script>
-    <script src="plugins/adaptive-version2.js"></script>
-    <script src="weui/weui.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/fastclick.min.js"></script>
+    <script src="../plugins/adaptive-version2.js"></script>
+    <script src="../weui/weui.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
 <div class="container">
-    <div class="question-wrap">
+    <div class="question-wrap webo-wrap">
+
         <div class="cell-media-box cell-question-box m-b-n">
             <div class="weui_media_box weui_media_appmsg">
                 <div class="weui_media_hd">
@@ -25,53 +26,24 @@
                          alt="">
                 </div>
                 <div class="weui_media_bd">
-                    <h4 class="weui_media_title"><b>墨小鸡</b></h4>
-                </div>
-                <div class="money-btn">￥10</div>
-            </div>
-            <div class="media-question-box">
-                <div class="media-nobg">
-                    <span class="text-success">问:</span> 娱乐圈有哪些不为人知的潜规则？是不是没有关系就一定无法成名？
+                    <h4 class="weui_media_title"><span class="text-success">我</span>要发微播</h4>
                 </div>
             </div>
-            <div class="media-box">
-                <div class="media-control">
-                    几秒前
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary textarea-box">
+                    <textarea class="weui_textarea" placeholder="在这里发布一个标题" rows="2"></textarea>
+                    <div class="weui_textarea_counter"><span>0</span>/50</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="media-wrap">
-        <div class="media-a">
-            抢答成功后，你需要在48小时内回答此问题
-        </div>
-        <div class="media-b">
-            &nbsp;
-        </div>
-        <div class="media-c">
-            <div class="media-c-a">
-                <span class="text-success"></span>
-            </div>
-            <div class="media-c-b">
-                <a class="media-btn media-btn-responder" href="javascript:;"></a>
-            </div>
-            <div class="media-c-c">
-            </div>
-        </div>
-        <div class="media-d">
-            <i class="iconfont icon-shang"></i> <br>
-            点击立即抢答
-        </div>
-    </div>
 
-    <!--<div class="media-wrap">
-        <div class="media-a">
-            分享你的回答，点赞最多即可获得￥69元悬赏
-        </div>
-        <div class="media-b">
-            用语音回复
-        </div>
+    <div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:00</dt>
+            <dd>点击开始60’录音</dd>
+        </dl>
         <div class="media-c">
             <div class="media-c-a">
                 <span class="text-success"></span>
@@ -83,29 +55,21 @@
                 <a href="javascript:;" class="media-re-btn">重录</a>
             </div>
         </div>
-        <div class="media-d">
-            点击开始录音 <br>
-            最多可录制60”
-        </div>
         <div class="media-e">
             <a href="" class="btn">确定发送</a>
         </div>
-    </div>-->
+    </div>
 
 
 
-    <!--
-    //录制中
-    <div class="media-wrap">
-        <div class="media-a">
-            分享你的回答，点赞最多即可获得￥69元悬赏
-        </div>
-        <div class="media-b">
-            用语音回复
-        </div>
+    <!--//录制中-->
+    <!--<div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:00</dt>
+            <dd>正在录音</dd>
+        </dl>
         <div class="media-c">
             <div class="media-c-a">
-                <span class="text-success">3"</span>
             </div>
             <div class="media-c-b">
                 <a class="media-btn media-btn-ing" href="javascript:;"></a>
@@ -113,10 +77,6 @@
             <div class="media-c-c">
                 <a href="javascript:;" class="media-re-btn">重录</a>
             </div>
-        </div>
-        <div class="media-d">
-            正在录音 <br>
-            再次点击停止录制
         </div>
         <div class="media-e">
             <a href="" class="btn">确定发送</a>
@@ -130,16 +90,13 @@
 
     <!--
     //录制完毕待播放
-    <div class="media-wrap">
-        <div class="media-a">
-            分享你的回答，点赞最多即可获得￥69元悬赏
-        </div>
-        <div class="media-b">
-            完成语音录制
-        </div>
+    <div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:54</dt>
+            <dd>录音完成</dd>
+        </dl>
         <div class="media-c">
             <div class="media-c-a">
-                <span class="text-success">3"</span>
             </div>
             <div class="media-c-b">
                 <a class="media-btn media-btn-over" href="javascript:;"></a>
@@ -148,10 +105,6 @@
                 <a href="javascript:;" class="media-re-btn usable">重录</a>
             </div>
         </div>
-        <div class="media-d">
-            播放试听 <br>
-
-        </div>
         <div class="media-e">
             <a href="" class="btn btn-success">确定发送</a>
         </div>
@@ -159,16 +112,13 @@
 
     <!--
     //语音播放中
-    <div class="media-wrap">
-        <div class="media-a">
-            分享你的回答，点赞最多即可获得￥69元悬赏
-        </div>
-        <div class="media-b">
-            完成语音录制
-        </div>
+    <div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:54</dt>
+            <dd>播放录音</dd>
+        </dl>
         <div class="media-c">
             <div class="media-c-a">
-                <span class="text-success">3"</span>
             </div>
             <div class="media-c-b">
                 <a class="media-btn media-btn-play" href="javascript:;"></a>
@@ -177,31 +127,37 @@
                 <a href="javascript:;" class="media-re-btn usable">重录</a>
             </div>
         </div>
-        <div class="media-d">
-            播放中... <br>
-
-        </div>
         <div class="media-e">
             <a href="" class="btn btn-success">确定发送</a>
         </div>
-    </div>-->
+    </div>
+    -->
 
 </div>
 <div class="fix-btn-box ui-border-t">
     <ul>
         <li class="active">
-            <a href="#">热门</a>
+            <a href="#">
+                <i class="iconfont icon-remen"></i>
+                热门</a>
         </li>
         <li>
-            <a href="#">发现</a>
+            <a href="#">
+                <i class="iconfont icon-faxian"></i>
+                发现</a>
         </li>
         <li>
-            <a href="#">广场</a>
+            <a href="#">
+                <i class="iconfont icon-radiotv"></i>
+                广场</a>
         </li>
         <li>
-            <a href="#">我的</a>
+            <a href="#">
+                <i class="iconfont icon-wode"></i>
+                我的</a>
         </li>
     </ul>
 </div>
+
 </body>
 </html>
