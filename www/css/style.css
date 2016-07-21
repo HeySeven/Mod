@@ -1643,6 +1643,7 @@ a.cell-question-box:active {
     margin-top: 0; }
 
 .badge-outline-danger {
+  line-height: .3rem;
   border: 1px solid #fc6864;
   background-color: transparent;
   color: #fc6864;
@@ -1658,6 +1659,7 @@ a.cell-question-box:active {
   border-radius: 0.04rem; }
 
 .badge-outline-default {
+  line-height: .3rem;
   background-color: transparent;
   color: #aaa;
   border: 1px solid #aaa;
