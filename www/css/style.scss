@@ -601,6 +601,13 @@ a.media-box {
       vertical-align: middle;
       color: #898989;
       margin-left: .2rem;
+      i{
+        font-size: .4rem;
+        &.icon-bianji{
+          position: relative;
+          top: -2px;
+        }
+      }
     }
   }
   .my-dl {
@@ -672,6 +679,7 @@ a.media-box {
           font-size: .38rem !important;
           i {
             position: relative;
+            font-size: .4rem;
             b {
               position: absolute;
               top: -.06rem;
@@ -1741,7 +1749,7 @@ a.cell-question-box:active {
 }
 
 .live-viewport {
-  padding: .1rem .15rem;
+  padding:.25rem .15rem;
 }
 
 .live-date {
@@ -1957,6 +1965,15 @@ a.cell-question-box:active {
     right: .25rem;
     top: .15rem;
     line-height: 1;
+    .upload-btn{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include x-opacity(0);
+      z-index: 1;
+    }
   }
 }
 
