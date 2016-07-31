@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Live现场</title>
+    <title>我的问答主页</title>
     <link rel="stylesheet" href="weui/weui.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_1469870889_05707.css">
     <link rel="stylesheet" href="css/style.css">
@@ -31,7 +31,7 @@
             </a>
         </div>
         <div class="live-viewport">
-            <div class="live-date">06 月 14 日  17:32</div>
+            <div class="live-date">06 月 14 日 17:32</div>
             <div class="live-media">
                 <div class="live-media-hd">
                     <a href="#"><img class="response-img" src="../images/author.jpg" alt=""></a>
@@ -149,6 +149,17 @@
                         <div class="live-describe">
                             娱乐圈有哪些不为人知的潜规则是不是没有关系就一定无法成名？
                         </div>
+                        <div class="live-praise">
+                            <i class="iconfont icon-xinshixin"></i>
+                            <ul class="author-list sm">
+                                <li><img class="response-img" src="../images/author.jpg" alt=""></li>
+                                <li><img class="response-img" src="../images/author.jpg" alt=""></li>
+                                <li><img class="response-img" src="../images/author.jpg" alt=""></li>
+                                <li><img class="response-img" src="../images/author.jpg" alt=""></li>
+                                <li><img class="response-img" src="../images/author.jpg" alt=""></li>
+                            </ul>
+                            <span>+6</span>
+                        </div>
                     </div>
                 </div>
                 <div class="live-media-hd">
@@ -161,33 +172,91 @@
 
 </div>
 <div class="fix-btn-box ui-border-t">
-    <ul>
-        <li class="active">
-            <a href="#">
-                <i class="iconfont icon-remen"></i>
-                热门</a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="iconfont icon-faxian"></i>
-                发现</a>
-        </li>
-        <li>
-            <a class="main-btn" href="#">
-                <i class="iconfont icon-mica"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="iconfont icon-zhibo"></i>
-                直播</a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="iconfont icon-wode"></i>
-                我的</a>
-        </li>
-    </ul>
+    <div class="fix-input-txt">
+        <div class="input-box">
+            <input class="fix-input-txt" type="text" placeholder="请输入消息">
+        </div>
+        <!--<a href="#" class="input-btn">发送</a>-->
+    </div>
+    <div class="fix-control">
+        <a href="javascript:;" class="mic-btn"><i class="iconfont icon-maikefeng"></i></a>
+        <a href="javascript:;" class="img-btn"><i class="iconfont icon-tupian"></i></a>
+    </div>
+    <div class="media-wrap media-wb ui-border-t">
+        <dl class="media-new">
+            <dt>0:00</dt>
+            <dd>点击开始60’录音</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-b">
+                <a class="media-btn" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+    <!--<div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:00</dt>
+            <dd>点击结束录音</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-b">
+                <a class="media-btn media-btn-ing" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>-->
+    <!--<div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:60</dt>
+            <dd>录音完成</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-a">
+                <a href="javascript:;" class="media-re-btn usable">重录</a>
+            </div>
+            <div class="media-c-b">
+                <a class="media-btn media-btn-over" href="javascript:;"></a>
+            </div>
+            <div class="media-c-c">
+                <a class="text-success">确认发送</a>
+            </div>
+        </div>
+    </div>-->
 </div>
+<script>
+    $(function () {
+        var $fixBtnWrap = $(".fix-btn-box");
+        var $micBtn = $fixBtnWrap.find(".mic-btn");
+        var $fixInputTxt = $fixBtnWrap.find(".fix-input-txt");
+        $micBtn.click(function () {
+            toggleExpend();
+        });
+        $fixInputTxt.focus(function(){
+            $fixBtnWrap.removeClass("active");
+        });
+        function toggleExpend(){
+            if($fixBtnWrap.hasClass("active")){
+                $fixBtnWrap.removeClass("active");
+            }else{
+                $fixBtnWrap.addClass("active");
+                $fixInputTxt.val("");
+            }
+        }
+    })
+</script>
+
 </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Live现场</title>
+    <link rel="stylesheet" href="weui/weui.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1469870889_05707.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="plugins/fastclick.min.js"></script>
+    <script src="plugins/adaptive-version2.js"></script>
+    <script src="weui/weui.js"></script>
+    <script src="js/main.js"></script>
+</head>
 </html>
