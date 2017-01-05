@@ -2015,4 +2015,65 @@ a.cell-question-box:active {
 .fix-btn-box.active .fix-control .mic-btn i {
   color: #75c171; }
 
+.fix-btn-text ul li a {
+  height: .84rem;
+  padding: 0;
+  line-height: .84rem; }
+
+.swiper-slide img {
+  display: block;
+  width: 100%; }
+
+.live-banner .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 5px; }
+.live-banner .swiper-container-horizontal .swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #676668; }
+.live-banner .swiper-container-horizontal .swiper-pagination-bullet-active {
+  background-color: #fff; }
+
+.live-list-wrap {
+  margin-top: .15rem; }
+  .live-list-wrap .weui_media_box.weui_media_appmsg {
+    background-color: #ffffff; }
+    .live-list-wrap .weui_media_box.weui_media_appmsg .weui_media_hd {
+      width: 1.16rem;
+      height: 1.16rem;
+      line-height: 1.16rem; }
+      .live-list-wrap .weui_media_box.weui_media_appmsg .weui_media_hd img {
+        -moz-border-radius: 0.1rem;
+        -webkit-border-radius: 0.1rem;
+        border-radius: 0.1rem; }
+    .live-list-wrap .weui_media_box.weui_media_appmsg .weui_media_title {
+      font-size: 0.28rem; }
+    .live-list-wrap .weui_media_box.weui_media_appmsg .weui_media_desc {
+      padding: .1rem 0;
+      font-size: .24rem;
+      color: #1b1b1b; }
+
+.live-control {
+  *zoom: 1;
+  font-size: .2rem; }
+  .live-control:before, .live-control:after {
+    content: " ";
+    display: table; }
+  .live-control:after {
+    clear: both; }
+  .live-control .time-tag {
+    float: right; }
+
+.time-tag {
+  display: inline-block;
+  padding: 0 .15rem;
+  height: .36rem;
+  line-height: .32rem;
+  border: 1px solid #75c171;
+  -moz-border-radius: 0 0.18rem 0.18rem 0.18rem;
+  -webkit-border-radius: 0 0.18rem 0.18rem 0.18rem;
+  border-radius: 0 0.18rem 0.18rem 0.18rem; }
+
 /*# sourceMappingURL=style.css.map */

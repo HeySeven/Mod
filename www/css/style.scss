@@ -601,9 +601,9 @@ a.media-box {
       vertical-align: middle;
       color: #898989;
       margin-left: .2rem;
-      i{
+      i {
         font-size: .4rem;
-        &.icon-bianji{
+        &.icon-bianji {
           position: relative;
           top: -2px;
         }
@@ -1749,7 +1749,7 @@ a.cell-question-box:active {
 }
 
 .live-viewport {
-  padding:.25rem .15rem;
+  padding: .25rem .15rem;
 }
 
 .live-date {
@@ -1957,7 +1957,7 @@ a.cell-question-box:active {
   .icon-tupian {
     color: $primary-color;
   }
-  .mic-btn{
+  .mic-btn {
     display: inline-block;
   }
   .img-btn {
@@ -1965,7 +1965,7 @@ a.cell-question-box:active {
     right: .25rem;
     top: .15rem;
     line-height: 1;
-    .upload-btn{
+    .upload-btn {
       position: absolute;
       left: 0;
       top: 0;
@@ -1985,24 +1985,104 @@ a.cell-question-box:active {
     .media-new {
       padding: .3rem;
     }
-    .media-c{
+    .media-c {
       padding-bottom: .5rem;
     }
   }
-  &.active{
+  &.active {
     .media-wb {
       overflow: hidden;
       height: 3.82rem;
     }
     .fix-control {
-      .mic-btn{
-        i{
+      .mic-btn {
+        i {
           color: $primary-color;
         }
       }
     }
   }
 }
+
+//v2-start
+.fix-btn-text {
+  ul {
+    li {
+      a {
+        height: .84rem;
+        padding: 0;
+        line-height: .84rem;
+      }
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.live-banner {
+  .swiper-container-horizontal {
+    & > .swiper-pagination-bullets {
+      bottom: 5px;
+    }
+    .swiper-pagination-bullet{
+      width: 5px;
+      height: 5px;
+      @include x-border-radius(50%);
+      background-color: #676668;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #fff;
+    }
+  }
+}
+
+.live-list-wrap{
+  margin-top:.15rem;
+  .weui_media_box.weui_media_appmsg{
+    background-color: #ffffff;
+    .weui_media_hd{
+      width: 1.16rem;
+      height: 1.16rem;
+      line-height: 1.16rem;
+      img{
+        @include x-border-radius(.1rem);
+      }
+    }
+    .weui_media_title{
+      font-size: $fz-sm;
+    }
+    .weui_media_desc{
+      padding:.1rem 0;
+      font-size: .24rem;
+      color: $color;
+    }
+  }
+}
+
+.live-control{
+  @include x-clearfix();
+  font-size: .2rem;
+  .time-tag{
+    float: right;
+  }
+}
+
+.time-tag{
+  display: inline-block;
+  padding: 0 .15rem;
+  height: .36rem;
+  line-height:.32rem;
+  border: 1px solid $primary-color;
+  @include x-border-radius(0 .18rem .18rem .18rem);
+}
+
+
+
+
+
 
 
 

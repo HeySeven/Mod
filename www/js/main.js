@@ -6,8 +6,16 @@ $(function() {
     FastClick.attach(document.body);
     $("body").on("click",'[data-dismiss="alert"]',function(){
         $(this).closest(".alert").fadeOut();
-    })
+    });
 
+    var $swiperContainer = $(".swiper-container");
+    if ($swiperContainer.length > 0) {
+        $swiperContainer.swiper({
+            loop: true,
+            pagination: '.swiper-pagination',
+            autoplay: 5000
+        });
+    }
 
     //音频播放方法定义
     function audioPlay(el){
