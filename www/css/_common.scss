@@ -5,7 +5,7 @@ $light-color: #898989;
 $lighter-color: #aaa;
 $primary-color: #75c171;
 $danger-color: #fc6864;
-$warning-color:#e3b243;
+$warning-color:#f6ad4e;
 $fz-normal: .32rem;
 $fz-sm: .28rem;
 $fz-xs: .24rem;
@@ -77,6 +77,9 @@ body {
 
 ul, ol {
   list-style: none;
+}
+.m-b{
+  margin-bottom: .1rem;
 }
 
 .pull-right {

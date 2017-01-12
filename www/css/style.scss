@@ -1376,36 +1376,7 @@ a.cell-question-box:active {
   }
   .login-content-e {
     padding: .2rem .25rem 0;
-    .qy-st-list {
-      @include x-clearfix();
-      display: inline-block;
-      line-height: 1;
-      padding: .07rem 0;
-      li {
-        float: left;
-        margin-right: .1rem;
-        img {
-          display: block;
-          width: .45rem;
-          height: .45rem;
-          @include x-border-radius(50%);
-        }
-        .like-img {
-          display: block;
-          width: .45rem;
-          height: .45rem;
-          line-height: .45rem;
-          text-align: center;
-          @include x-border-radius(50%);
-          background-color: #e7e7e7;
-          color: #c9c9c9;
-          i {
-            line-height: 1;
-            font-size: .3rem;
-          }
-        }
-      }
-    }
+
   }
   .login-content-f {
     .content-f-a {
@@ -1418,7 +1389,36 @@ a.cell-question-box:active {
     }
   }
 }
-
+.qy-st-list {
+  @include x-clearfix();
+  display: inline-block;
+  line-height: 1;
+  padding: .07rem 0;
+  li {
+    float: left;
+    margin-right: .1rem;
+    img {
+      display: block;
+      width: .45rem;
+      height: .45rem;
+      @include x-border-radius(50%);
+    }
+    .like-img {
+      display: block;
+      width: .45rem;
+      height: .45rem;
+      line-height: .45rem;
+      text-align: center;
+      @include x-border-radius(50%);
+      background-color: #e7e7e7;
+      color: #c9c9c9;
+      i {
+        line-height: 1;
+        font-size: .3rem;
+      }
+    }
+  }
+}
 .qy-dis-list {
   padding: .1rem .25rem;
   color: $light-color;
@@ -1591,338 +1591,6 @@ a.cell-question-box:active {
   }
 }
 
-.live-list {
-  .cell-media-box {
-    background-color: transparent;
-  }
-  .weui_media_box.weui_media_appmsg {
-    background-color: #ffffff;
-    margin-top: .2rem;
-    .weui_media_hd {
-      margin-top: .06rem;
-      width: 1rem;
-      height: 1rem;
-    }
-    .weui_media_desc {
-      padding-top: 0;
-    }
-    .media-control {
-      margin-top: 0;
-    }
-  }
-}
-
-.badge-outline-danger {
-  line-height: .3rem;
-  border: 1px solid $danger-color;
-  background-color: transparent;
-  color: $danger-color;
-  @include x-border-radius(.04rem);
-}
-
-.badge-success {
-  background-color: $primary-color;
-  color: #ffffff;
-  @include x-border-radius(.04rem);
-}
-
-.badge-outline-default {
-  line-height: .3rem;
-  background-color: transparent;
-  color: $lighter-color;
-  border: 1px solid $lighter-color;
-  @include x-border-radius(.04rem);
-}
-
-.live-media {
-  & + .live-media {
-    margin-top: .2rem;
-  }
-  .weui_media_box.weui_media_appmsg {
-    background-color: #ffffff;
-    .weui_media_appmsg_thumb {
-      @include x-border-radius(50%);
-    }
-    .weui_media_title {
-      font-size: .28rem;
-      font-weight: normal;
-    }
-  }
-}
-
-.live-msg-box {
-  padding: .2rem .24rem;
-  background-color: #ffffff;
-  border-top: 1px dashed #e5e5e5;
-  dd {
-    font-size: .2rem;
-    span {
-      color: $light-color;
-    }
-  }
-  dt {
-    font-size: .3rem;
-    color: $light-color;
-  }
-}
-
-.people-list-box {
-  margin-top: .15rem;
-  background-color: #ffffff;
-  padding: .2rem .24rem;
-  @include x-clearfix();
-  .qy-st-list {
-    @include x-clearfix();
-    float: left;
-    line-height: 1;
-    padding: .07rem 0;
-    li {
-      float: left;
-      margin-right: .1rem;
-      img {
-        display: block;
-        width: .45rem;
-        height: .45rem;
-        @include x-border-radius(50%);
-      }
-      .like-img {
-        display: block;
-        width: .45rem;
-        height: .45rem;
-        line-height: .45rem;
-        text-align: center;
-        @include x-border-radius(50%);
-        background-color: #e7e7e7;
-        color: #c9c9c9;
-        i {
-          line-height: 1;
-          font-size: .3rem;
-        }
-      }
-    }
-  }
-  .pull-right {
-    margin-top: .08rem;
-    font-size: .2rem;
-    line-height: .45rem;
-    color: $lighter-color;
-  }
-  .btn {
-    display: block;
-    text-align: center;
-  }
-}
-
-.live-detail-content {
-  margin-top: .15rem;
-  background-color: #ffffff;
-  padding: .24rem;
-  font-size: .24rem;
-  color: #898989;
-  h2 {
-    font-size: .28rem;
-    color: #434343;
-    margin-bottom: .1rem;
-  }
-  p {
-    margin: .1rem 0;
-  }
-}
-
-.live-media-box {
-  margin-bottom: 0;
-  .weui_media_box.weui_media_appmsg {
-    .weui_media_title {
-      font-size: .28rem;
-      color: $color;
-    }
-    .weui_media_desc {
-      text-align: justify;
-      font-size: $fz-xs;
-      color: $light-color;
-      i {
-        font-size: $fz-sm;
-        margin-right: .1rem;
-      }
-    }
-  }
-}
-
-.live-viewport {
-  padding: .25rem .15rem;
-}
-
-.live-date {
-  color: $light-color;
-  text-align: center;
-  font-size: $fz-xs;
-}
-
-.live-media {
-  @include flexbox();
-}
-
-.live-media-hd {
-  width: .54rem;
-  height: .54rem;
-  line-height: .54rem;
-  margin-right: .15rem;
-
-  img {
-    @include x-border-radius(50%);
-  }
-}
-
-.live-media-bd {
-  @include flex(1);
-  .author-name {
-    color: $lighter-color;
-    font-size: $fz-xs;
-  }
-  .live-body {
-    .live-describe {
-      @include x-border-radius(0 .26rem 0 0);
-      margin-right: .45rem;
-      padding: .15rem;
-      line-height: 1.4;
-      color: #ffffff;
-      font-size: $fz-xs;
-      background-color: $primary-color;
-      & + .live-box {
-        margin-top: 1px;
-        .media-bar {
-          @include x-border-radius(0 0 .26rem .26rem);
-        }
-      }
-    }
-
-  }
-}
-
-.live-box {
-  @include flexbox();
-  .media-bar {
-    position: relative;
-    height: .52rem;
-    background-color: $primary-color;
-    @include x-border-radius(0 .26rem .26rem);
-    @include flex(1);
-    &:before {
-      content: "";
-      position: absolute;
-      top: .24rem;
-      left: .08rem;
-      right: .08rem;
-      border-bottom: 2px solid #fff;
-    }
-    .media-time {
-      position: absolute;
-      top: .08rem;
-      right: .08rem;
-      background-color: #fff;
-      padding: 0 .1rem;
-      height: .36rem;
-      line-height: .36rem;
-      @include x-border-radius(.18rem);
-      font-size: $fz-xs;
-      color: $primary-color;
-    }
-    .media-control {
-      position: absolute;
-      top: .08rem;
-      left: .08rem;
-      width: .36rem;
-      height: .36rem;
-      text-align: center;
-      line-height: .36rem;
-      @include x-border-radius(50%);
-      background-color: #ffffff;
-      i {
-        font-size: $fz-xs;
-        color: $primary-color;
-        &.icon-bofang {
-          position: relative;
-          top: -.02rem;
-        }
-      }
-    }
-  }
-  .media-status {
-    width: .45rem;
-    text-align: right;
-    line-height: .52rem;
-    i {
-      font-size: $fz-sm;
-      color: $primary-color;
-      &.icon-duigou {
-        color: $lighter-color;
-      }
-    }
-  }
-}
-
-.live-media-reply {
-  .live-media-hd {
-    margin-right: 0;
-    margin-left: .15rem;
-  }
-  .live-media-bd {
-    .author-name {
-      text-align: right;
-    }
-    .live-body {
-      .live-describe {
-        float: right;
-        margin-right: 0;
-        margin-left: .45rem;
-        background-color: #fff;
-        color: $color;
-        @include x-border-radius(.26rem 0 .26rem .26rem);
-
-      }
-    }
-  }
-}
-
-.live-praise {
-  @include x-clearfix();
-  margin-top: .1rem;
-  clear: both;
-  text-align: right;
-  & > * {
-    vertical-align: middle;
-  }
-  i {
-    display: inline-block;
-    font-size: $fz-sm;
-    color: $lighter-color;
-  }
-  .author-list {
-    display: inline-block;
-    li {
-      float: left;
-      margin: 0 .04rem;
-      img {
-        width: .28rem;
-        height: .28rem;
-        @include x-border-radius(50%);
-      }
-    }
-
-  }
-  span {
-    background-color: #e2e1e8;
-    height: .28rem;
-    line-height: .28rem;
-    text-align: center;
-    padding: 0 .15rem;
-    margin-left: .05rem;
-    font-size: $fz-xs;
-    @include x-border-radius(.14rem);
-    color: $light-color;
-  }
-}
-
 .fix-input-txt {
   @include flexbox();
   .input-box {
@@ -2042,6 +1710,7 @@ a.cell-question-box:active {
 .live-list-wrap{
   margin-top:.15rem;
   .weui_media_box.weui_media_appmsg{
+    position: relative;
     background-color: #ffffff;
     .weui_media_hd{
       width: 1.16rem;
@@ -2053,6 +1722,10 @@ a.cell-question-box:active {
     }
     .weui_media_title{
       font-size: $fz-sm;
+      i.iconfont{
+        vertical-align: middle;
+        color: $warning-color;
+      }
     }
     .weui_media_desc{
       padding:.1rem 0;
@@ -2065,11 +1738,21 @@ a.cell-question-box:active {
 .live-control{
   @include x-clearfix();
   font-size: .2rem;
+  color: $light-color;
   .time-tag{
     float: right;
+    color: $color;
   }
 }
-
+.class-flag{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: .59rem;
+  height: .61rem;
+  background: url(../images/class.png) 0 0 no-repeat;
+  @include x-background-size(contain);
+}
 .time-tag{
   display: inline-block;
   padding: 0 .15rem;
@@ -2079,14 +1762,100 @@ a.cell-question-box:active {
   @include x-border-radius(0 .18rem .18rem .18rem);
 }
 
+.live-box{
+  position: relative;
+  background-color: #ffffff;
+  padding: .24rem;
+  @include flexbox();
+  @include align-items(flex-start);
+  .live-hd{
+    width: 1.16rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    margin-right: .3rem;
+    img{
+      max-width: 100%;
+      @include x-border-radius(.1rem);
+    }
+  }
+  .live-bd{
+    @include flex(1);
+    h4{
+      min-height: .88rem;
+      font-size: $fz-sm;
+      font-weight: normal;
+      line-height: 1.4;
+      i.iconfont{
+        vertical-align: middle;
+        color: $warning-color;
+      }
+    }
+    p{
+      line-height: 1;
+      font-size: .26rem;
+      color: $color;
+    }
+  }
+}
 
+.live-share{
+  @include x-clearfix();
+  padding: 0 .3rem .13rem;
+  font-size: .26rem;
+  background-color: #ffffff;
+  .pull-right{
+    width: .32rem;
+    height: .32rem;
+    line-height: 1;
+  }
+  i{
+    font-size: .32rem;
+  }
+}
+.live-user-list{
+  @include x-clearfix();
+  padding: .13rem .3rem;
+  font-size: .24rem;
+  background-color: #ffffff;
+  line-height: .6rem;
+  .qy-st-list{
+    display: block;
+    li{
+      margin-right: 0;
+      img{
+        width: .42rem;
+        height: .42rem;
+      }
+      &+li{
+        margin-left: .1rem;
+      }
+    }
+  }
+}
 
+.live-panel{
+  font-size: .26rem;
+  .live-panel-header{
+    position: relative;
+    line-height: .74rem;
+    padding: 0 .3rem;
+    background-color: #ffffff;
+  }
+  .live-panel-body{
+    margin-top: .05rem;
+    background-color: #ffffff;
+    .live-list-wrap{
+      margin-top: 0;
+    }
+  }
+}
 
+.live-intro{
+  padding: .2rem .3rem;
+  p{
 
-
-
-
-
+  }
+}
 
 
 
