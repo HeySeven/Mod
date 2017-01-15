@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>选择直播类型</title>
+    <link rel="stylesheet" href="weui/weui.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_tg1g6lcoy0q9f6r.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="plugins/fastclick.min.js"></script>
+    <script src="plugins/adaptive-version2.js"></script>
+    <script src="weui/weui.js"></script>
+    <script src="plugins/jquery-weui.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="live-select-wrap">
+        <dl class="live-select-dl">
+            <dt>选择直播类型</dt>
+            <dd>选择后不能更改</dd>
+        </dl>
+        <div class="live-select-tab">
+            <ul>
+                <li class="active">
+                    <strong><i class="iconfont icon-record"></i></strong>
+                    <span>收费直播</span>
+                </li>
+                <li>
+                    <strong><i class="iconfont icon-record"></i></strong>
+                    <span>免费直播</span>
+                </li>
+                <li>
+                    <strong><i class="iconfont icon-record"></i></strong>
+                    <span>加密直播</span>
+                </li>
+            </ul>
+        </div>
+        <div class="live-select-tab-content">
+            <div class="live-select-body">
+                <div class="live-s-group">
+                    <label for="">直播结束前价格（1~1000）元</label>
+                    <dl>
+                        <dt>
+                            <input class="live-s-control" type="text" placeholder="默认为1">
+                        </dt>
+                        <dd>元</dd>
+                    </dl>
+                </div>
+                <div class="live-s-group">
+                    <label for="">直播结束后价格（1~1000）元</label>
+                    <dl>
+                        <dt>
+                            <input class="live-s-control" type="text" placeholder="最小金额1元">
+                        </dt>
+                        <dd>元</dd>
+                    </dl>
+                </div>
+                <div class="live-s-group">
+                    <label for="">发言名额（50~200）名</label>
+                    <dl>
+                        <dt>
+                            <input class="live-s-control" type="text" placeholder="默认50，按购票顺序发放">
+                        </dt>
+                        <dd>名</dd>
+                    </dl>
+                </div>
+                <div class="live-s-group">
+                    <label for="">发言次数（3~10）次</label>
+                    <dl>
+                        <dt>
+                            <input class="live-s-control" type="text" placeholder="默认3">
+                        </dt>
+                        <dd>名</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="live-select-btnbox">
+            <a class="weui_btn weui_btn_plain_default" href="###">上一步</a>
+            <a class="weui_btn weui_btn_primary" href="###">完成</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -78,10 +78,18 @@ body {
 ul, ol {
   list-style: none;
 }
-.m-b{
-  margin-bottom: .1rem;
+.m-t{
+  margin-top: .12rem;
 }
-
+.m-b{
+  margin-bottom: .12rem;
+}
+.m-l{
+  margin-left: .12rem;
+}
+.m-r{
+  margin-right: .12rem;
+}
 .pull-right {
   float: right;
 }
