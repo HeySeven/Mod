@@ -35,7 +35,9 @@ $(function() {
     $("body").on("click","[data-toggle='audio-btn']",function(){
         audioPlay($(this));//播放音频
     });
-
+    $("body").on("click","[data-toggle='live-panel']",function(){
+        $(this).toggleClass('open');
+    });
     //领域选择
     function toggleSlid() {
         var t = $(".side-menu-bar");
