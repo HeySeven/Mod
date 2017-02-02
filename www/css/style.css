@@ -2066,8 +2066,19 @@ a.cell-question-box:active {
     -ms-flex: 1;
     flex: 1; }
     .live-select-tab ul li.active strong {
+      position: relative;
       color: #75c171;
       border-color: #75c171; }
+      .live-select-tab ul li.active strong:before {
+        font-family: "iconfont" !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 1;
+        content: "\e689";
+        font-size: .3rem; }
     .live-select-tab ul li strong {
       margin: 0 auto;
       width: .88rem;
@@ -2078,10 +2089,10 @@ a.cell-question-box:active {
       border: 1px solid #d2d2d2;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      color: #898989; }
       .live-select-tab ul li strong i {
-        line-height: 1;
-        font-size: .4rem; }
+        font-size: .5rem; }
     .live-select-tab ul li span {
       margin-top: .1rem;
       display: block;
@@ -2091,9 +2102,12 @@ a.cell-question-box:active {
 .live-select-tab-content {
   padding: .16rem; }
   .live-select-tab-content .live-select-body {
+    display: none;
     padding: .16rem;
     background-color: #ffffff;
     border: 1px solid #dcdcdc; }
+    .live-select-tab-content .live-select-body.active {
+      display: block; }
 
 .live-s-group {
   margin-bottom: .1rem; }
@@ -2181,5 +2195,16 @@ a.cell-question-box:active {
       background-color: #fc6864; }
   .live-select-btnbox .weui_btn_primary:not(.weui_btn_disabled):active {
     background-color: #fb3732; }
+
+.live-select .select_cell {
+  display: block;
+  padding: 0 .24rem;
+  background-color: #ffffff;
+  margin-top: .12rem;
+  line-height: .86rem;
+  color: #1b1b1b;
+  font-size: 0.28rem; }
+  .live-select .select_cell:active {
+    background-color: #d1d1d1; }
 
 /*# sourceMappingURL=style.css.map */
