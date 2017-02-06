@@ -234,9 +234,9 @@ button.close {
     display: -webkit-flex;
     display: flex;
     border: 1px solid #75c171;
-    -moz-border-radius: 30rem;
-    -webkit-border-radius: 30rem;
-    border-radius: 30rem;
+    -moz-border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    border-radius: 0.4rem;
     overflow: hidden; }
     .index-header ul li {
       -webkit-box-flex: 1;
@@ -2206,5 +2206,21 @@ a.cell-question-box:active {
   font-size: 0.28rem; }
   .live-select .select_cell:active {
     background-color: #d1d1d1; }
+
+.live-tab-header {
+  text-align: center;
+  padding: .15rem;
+  background-color: transparent; }
+  .live-tab-header ul {
+    margin: 0 auto;
+    width: 2.5rem; }
+    .live-tab-header ul li {
+      border-right: 0; }
+      .live-tab-header ul li.active {
+        -moz-border-radius: 0.3rem;
+        -webkit-border-radius: 0.3rem;
+        border-radius: 0.3rem; }
+  .live-tab-header + .live-list-wrap {
+    margin-top: 0; }
 
 /*# sourceMappingURL=style.css.map */

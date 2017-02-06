@@ -6,7 +6,7 @@
   ul {
     @include flexbox();
     border: 1px solid $primary-color;
-    @include x-border-radius(30rem);
+    @include x-border-radius(.4rem);
     overflow: hidden;
     li {
       @include flex(1);
@@ -2042,7 +2042,7 @@ a.cell-question-box:active {
           position: relative;
           color: $primary-color;
           border-color: $primary-color;
-          &:before{
+          &:before {
             font-family: "iconfont" !important;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -2086,7 +2086,7 @@ a.cell-question-box:active {
     padding: .16rem;
     background-color: #ffffff;
     border: 1px solid #dcdcdc;
-    &.active{
+    &.active {
       display: block;
     }
   }
@@ -2157,8 +2157,8 @@ a.cell-question-box:active {
   }
 }
 
-.live-select{
-  .select_cell{
+.live-select {
+  .select_cell {
     display: block;
     padding: 0 .24rem;
     background-color: #ffffff;
@@ -2166,13 +2166,30 @@ a.cell-question-box:active {
     line-height: .86rem;
     color: $color;
     font-size: $fz-sm;
-    &:active{
+    &:active {
       background-color: #d1d1d1;
     }
   }
 }
 
-
+.live-tab-header {
+  text-align: center;
+  padding: .15rem;
+  background-color: transparent;
+  ul {
+    margin: 0 auto;
+    width: 2.5rem;
+    li {
+      border-right: 0;
+      &.active {
+        @include x-border-radius(.3rem);
+      }
+    }
+  }
+  & + .live-list-wrap {
+    margin-top: 0;
+  }
+}
 
 
 
