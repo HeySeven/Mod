@@ -1767,7 +1767,16 @@ a.cell-question-box:active {
   width: .59rem;
   height: .61rem;
   background: url(../images/class.png) 0 0 no-repeat;
-  @include x-background-size(contain);
+  @include x-background-size(.59rem);
+  &.flag-1{
+    background-position: 0 -.61rem;
+  }
+  &.flag-2{
+    background-position: 0 -1.22rem;
+  }
+  &.flag-3{
+    background-position: 0 -1.83rem;
+  }
 }
 
 .time-tag {
@@ -1777,6 +1786,9 @@ a.cell-question-box:active {
   line-height: .32rem;
   border: 1px solid $primary-color;
   @include x-border-radius(0 .18rem .18rem .18rem);
+  &.time-warning-tag{
+    border-color: $warning-color;
+  }
 }
 
 .live-box {
@@ -2191,7 +2203,18 @@ a.cell-question-box:active {
   }
 }
 
-
+.live-list-header {
+  display: block;
+  padding: 0 .24rem;
+  background-color: #ffffff;
+  margin-top: .12rem;
+  line-height: .74rem;
+  color: #1b1b1b;
+  font-size: 0.28rem;
+  & + .live-list-wrap {
+    margin-top: .05rem;
+  }
+}
 
 
 

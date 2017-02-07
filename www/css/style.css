@@ -1787,10 +1787,16 @@ a.cell-question-box:active {
   width: .59rem;
   height: .61rem;
   background: url(../images/class.png) 0 0 no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain; }
+  -webkit-background-size: 0.59rem;
+  -moz-background-size: 0.59rem;
+  -o-background-size: 0.59rem;
+  background-size: 0.59rem; }
+  .class-flag.flag-1 {
+    background-position: 0 -.61rem; }
+  .class-flag.flag-2 {
+    background-position: 0 -1.22rem; }
+  .class-flag.flag-3 {
+    background-position: 0 -1.83rem; }
 
 .time-tag {
   display: inline-block;
@@ -1801,6 +1807,8 @@ a.cell-question-box:active {
   -moz-border-radius: 0 0.18rem 0.18rem 0.18rem;
   -webkit-border-radius: 0 0.18rem 0.18rem 0.18rem;
   border-radius: 0 0.18rem 0.18rem 0.18rem; }
+  .time-tag.time-warning-tag {
+    border-color: #f6ad4e; }
 
 .live-box {
   position: relative;
@@ -2222,5 +2230,16 @@ a.cell-question-box:active {
         border-radius: 0.3rem; }
   .live-tab-header + .live-list-wrap {
     margin-top: 0; }
+
+.live-list-header {
+  display: block;
+  padding: 0 .24rem;
+  background-color: #ffffff;
+  margin-top: .12rem;
+  line-height: .74rem;
+  color: #1b1b1b;
+  font-size: 0.28rem; }
+  .live-list-header + .live-list-wrap {
+    margin-top: .05rem; }
 
 /*# sourceMappingURL=style.css.map */

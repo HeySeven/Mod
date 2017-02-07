@@ -142,5 +142,25 @@
         <a href="#" class="live-btn-bd">立即参与</a>
     </div>
 </div>
+<script>
+    //    $.confirm("自定义的消息内容", function() {
+    //        //点击确认后的回调函数
+    //    }, function() {
+    //        //点击取消后的回调函数
+    //    });
+    //如果参数过多，建议通过 object 方式传入
+    $.prompt({
+        title: '请输入加密密码',
+        text: '',
+        input: '密码',
+        empty: false, // 是否允许为空
+        onOK: function (input) {
+            //点击确认
+        },
+        onCancel: function () {
+            //点击取消
+        }
+    });
+</script>
 </body>
 </html>
