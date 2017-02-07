@@ -2242,4 +2242,56 @@ a.cell-question-box:active {
   .live-list-header + .live-list-wrap {
     margin-top: .05rem; }
 
+.live-page-wrap {
+  padding: .15rem .2rem; }
+
+.live-page-header {
+  padding: .15rem .4rem .2rem;
+  text-align: center;
+  background-color: #ffffff;
+  -moz-border-radius: 0.1rem;
+  -webkit-border-radius: 0.1rem;
+  border-radius: 0.1rem; }
+  .live-page-header img {
+    width: 1.14rem;
+    height: 1.14rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  .live-page-header dl {
+    margin-bottom: .1rem; }
+    .live-page-header dl dt {
+      font-weight: normal; }
+    .live-page-header dl dd {
+      font-size: .24rem;
+      color: #898989; }
+  .live-page-header p {
+    text-align: left;
+    font-size: .24rem;
+    color: #7e7d7d;
+    line-height: .3rem;
+    margin-bottom: .1rem;
+    max-height: .6rem;
+    overflow: hidden; }
+    .live-page-header p.open {
+      max-height: inherit; }
+  .live-page-header .show-all {
+    font-size: .22rem;
+    color: #fc6864; }
+
+.live-page-yq {
+  margin: .1rem 0;
+  padding: .15rem;
+  text-align: center;
+  background-color: #ffffff;
+  -moz-border-radius: 0.1rem;
+  -webkit-border-radius: 0.1rem;
+  border-radius: 0.1rem; }
+  .live-page-yq .btn {
+    padding: .12rem .35rem;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: .22rem; }
+
 /*# sourceMappingURL=style.css.map */

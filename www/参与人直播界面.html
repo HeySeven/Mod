@@ -18,7 +18,25 @@
 </head>
 <body>
 <div class="container">
-    参与人直播界面
+    <div class="live-page-wrap">
+        <div class="live-page-header">
+            <img src="images/author.jpg" alt="">
+            <dl>
+                <dt>韩春生</dt>
+                <dd>直播时间：12月13日 20:00</dd>
+            </dl>
+            <p>提出情感相关问题，具体描述事情的前因后果和你的 困惑，精选优质导师帮你解答。提出情感相关问题，具体描述事情的前因后果和你的 困惑，精选优质导师帮你解答。 </p>
+            <a class="show-all" href="javascript:;">查看完整简介</a>
+        </div>
+        <div class="live-page-yq">
+            <a class="btn btn-danger" href="###">我的邀请卡</a>
+        </div>
+    </div>
 </div>
+<script>
+    $('.show-all').click(function(){
+        $(this).hide().prev('p').addClass('open');
+    });
+</script>
 </body>
 </html>

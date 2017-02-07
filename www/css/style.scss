@@ -2216,8 +2216,57 @@ a.cell-question-box:active {
   }
 }
 
+.live-page-wrap{
+  padding: .15rem .2rem;
+}
+.live-page-header{
+  padding: .15rem .4rem .2rem;
+  text-align: center;
+  background-color: #ffffff;
+  @include x-border-radius(.1rem);
+  img{
+    width: 1.14rem;
+    height: 1.14rem;
+    @include x-border-radius(50%);
+  }
+  dl{
+    margin-bottom: .1rem;
+    dt{
+      font-weight: normal;
+    }
+    dd{
+      font-size: .24rem;
+      color: $light-color;
+    }
+  }
+  p{
+    text-align: left;
+    font-size: .24rem;
+    color: #7e7d7d;
+    line-height: .3rem;
+    margin-bottom: .1rem;
+    max-height: .6rem;
+    overflow: hidden;
+    &.open{
+      max-height: inherit;
+    }
+  }
+  .show-all{
+    font-size: .22rem;
+    color: $danger-color;
+  }
+}
 
-
-
-
+.live-page-yq{
+  margin:.1rem 0;
+  padding: .15rem;
+  text-align: center;
+  background-color: #ffffff;
+  @include x-border-radius(.1rem);
+  .btn{
+    padding: .12rem .35rem;
+    @include x-border-radius(3px);
+    font-size: .22rem;
+  }
+}
 
