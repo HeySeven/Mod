@@ -2280,7 +2280,7 @@ a.cell-question-box:active {
     color: #fc6864; }
 
 .live-page-yq {
-  margin: .1rem 0;
+  margin-top: .1rem;
   padding: .15rem;
   text-align: center;
   background-color: #ffffff;
@@ -2293,5 +2293,143 @@ a.cell-question-box:active {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     font-size: .22rem; }
+
+.live-content-body {
+  padding: .15rem 0; }
+
+.live-detail-wrap .live-item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: .1rem 0; }
+  .live-detail-wrap .live-item .live-hd {
+    width: .66rem;
+    height: .66rem;
+    margin-right: .2rem; }
+    .live-detail-wrap .live-item .live-hd img {
+      width: .66rem;
+      height: .66rem;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+  .live-detail-wrap .live-item .live-bd {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.live-author-name {
+  font-weight: bold;
+  font-size: .24rem;
+  margin-bottom: .1rem; }
+
+.live-text-box {
+  max-width: 4.2rem;
+  display: inline-block;
+  padding: .1rem .2rem;
+  background-color: #ffffff;
+  -moz-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  -webkit-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  border-radius: 0 0.3rem 0.3rem 0.3rem;
+  font-size: .24rem; }
+
+.my-live-item .live-hd {
+  margin-right: 0;
+  margin-left: .2rem; }
+.my-live-item .live-author-name {
+  text-align: right; }
+.my-live-item .live-item-body {
+  text-align: right; }
+.my-live-item .live-text-box {
+  text-align: left;
+  color: #ffffff;
+  background-color: #75c171;
+  -moz-border-radius: 0.3rem 0 0.3rem 0.3rem;
+  -webkit-border-radius: 0.3rem 0 0.3rem 0.3rem;
+  border-radius: 0.3rem 0 0.3rem 0.3rem; }
+
+.ui-audio-bar {
+  position: relative;
+  width: 3.6rem;
+  height: .6rem;
+  padding: .28rem .82rem 0 .6rem;
+  background-color: #fff;
+  -moz-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  -webkit-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  border-radius: 0 0.3rem 0.3rem 0.3rem; }
+  .ui-audio-bar.playing .ui-audio-progress .audio-progress-inner {
+    width: 100%; }
+  .ui-audio-bar .ui-audio-progress {
+    height: .04rem;
+    background-color: #bdbdbd;
+    -moz-border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    overflow: hidden; }
+    .ui-audio-bar .ui-audio-progress .audio-progress-inner {
+      width: 0;
+      height: 100%;
+      background-color: #1b1b1b;
+      -webkit-transition: linear;
+      -moz-transition: linear;
+      -o-transition: linear;
+      transition: linear; }
+  .ui-audio-bar .ui-audio-data {
+    position: absolute;
+    top: .12rem;
+    right: .2rem;
+    color: #1b1b1b;
+    font-size: 0.24rem; }
+  .ui-audio-bar .audio-btn {
+    position: absolute;
+    top: .13rem;
+    left: .2rem;
+    line-height: 1;
+    color: #1b1b1b; }
+    .ui-audio-bar .audio-btn i {
+      font-size: .36rem; }
+
+.jia-reply {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: .15rem;
+  -moz-box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.05); }
+  .jia-reply .jia-reply-inner {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    .jia-reply .jia-reply-inner input {
+      width: 100%;
+      padding: 0 .15rem;
+      line-height: .5rem;
+      border: 1px solid #e5e5e5;
+      background-color: #f7f7f7;
+      color: #737272;
+      font-size: .26rem;
+      text-align: left; }
+      .jia-reply .jia-reply-inner input:focus {
+        outline: none; }
+  .jia-reply .reply-btn-wrap {
+    padding-left: .15rem; }
+    .jia-reply .reply-btn-wrap .reply-btn {
+      display: block;
+      line-height: .54rem;
+      padding: 0 .2rem;
+      background-color: #75c171;
+      color: #ffffff;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      font-size: .2rem; }
 
 /*# sourceMappingURL=style.css.map */
