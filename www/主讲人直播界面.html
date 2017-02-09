@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>参与人直播界面</title>
+    <title>主讲人直播界面</title>
     <link rel="stylesheet" href="weui/weui.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_nmfmi65bopskmx6r.css">
     <link rel="stylesheet" href="css/jquery-weui.css">
@@ -150,15 +150,41 @@
 </div>
 <div class="fix-btn-box ui-border-t">
     <div class="jia-reply" data-toggle="reply-btn">
-        <div class="jia-reply-inner">
-            <input type="text" placeholder="说点什么吧~">
+        <div class="jia-reply-inner main-reply-inner">
+            <input type="text" placeholder="说点什么吧~" value="@二虎子......主讲答复参与者问题">
         </div>
+        <a href="###" class="reply-btn-img">
+            <i class="iconfont icon-tupian1"></i>
+        </a>
+        <a href="###" class="reply-btn-audio">
+            <i class="iconfont icon-yuyin1"></i>
+        </a>
         <div class="reply-btn-wrap">
             <a href="###" class="reply-btn">发送</a>
         </div>
     </div>
 </div>
 <script>
+    var $replyBtnAudio = $('.reply-btn-audio');
+    var $replyBtnWrap = $('.reply-btn-wrap');
+    $('.main-reply-inner input').focus(function () {
+        canText();
+    }).blur(function () {
+        if ($(this).val() == 0) {
+            canNotText();
+        }
+    });
+
+    function canNotText() {
+        $replyBtnAudio.show();
+        $replyBtnWrap.hide();
+    }
+    function canText() {
+        $replyBtnAudio.hide();
+        $replyBtnWrap.show();
+    }
+
+
     $('.show-all').click(function () {
         $(this).hide().prev('p').addClass('open');
     });
@@ -205,7 +231,8 @@
                     .find(".audio-progress-inner").removeAttr("style");
             ;//移除播放效果
         }
-    };
+    }
+    ;
 
     $("body").on("click", "[data-toggle='live-btn']", function () {
         livePlay($(this));//播放音频
