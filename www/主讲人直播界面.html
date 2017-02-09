@@ -151,7 +151,7 @@
 <div class="fix-btn-box ui-border-t">
     <div class="jia-reply" data-toggle="reply-btn">
         <div class="jia-reply-inner main-reply-inner">
-            <input type="text" placeholder="说点什么吧~" value="@二虎子......主讲答复参与者问题">
+            <input type="text" placeholder="说点什么吧~">
         </div>
         <a href="###" class="reply-btn-img">
             <i class="iconfont icon-tupian1"></i>
@@ -164,9 +164,86 @@
         </div>
     </div>
 </div>
+
+<div class="audio-publish-drop"></div>
+<div class="audio-publish-wrap">
+    <div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:00</dt>
+            <dd>点击开始60″录音</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-a">
+                <a data-toggle="close-audio-btn" href="javascript:;" class="media-re-btn">取消</a>
+            </div>
+            <div class="media-c-b">
+                <a class="media-btn" href="javascript:;"></a>
+            </div>
+            <div class="media-c-c"></div>
+        </div>
+    </div>
+    <!--<div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:00</dt>
+            <dd>录制中再次点击，停止录制</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-a">
+            </div>
+            <div class="media-c-b">
+                <a class="media-btn media-btn-ing" href="javascript:;"></a>
+            </div>
+            <div class="media-c-c"></div>
+        </div>
+    </div>-->
+
+    <!--<div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:54</dt>
+            <dd>录音完成</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-a">
+                <a href="javascript:;" class="media-re-btn">重录</a>
+            </div>
+            <div class="media-c-b">
+                <a class="media-btn media-btn-over" href="javascript:;"></a>
+            </div>
+            <div class="media-c-c">
+                <a href="javascript:;" class="media-re-btn usable">发送</a>
+            </div>
+        </div>
+    </div>-->
+
+
+    <!--<div class="media-wrap media-wb">
+        <dl class="media-new">
+            <dt>0:54</dt>
+            <dd>播放录音</dd>
+        </dl>
+        <div class="media-c">
+            <div class="media-c-a">
+                <a href="javascript:;" class="media-re-btn">重录</a>
+            </div>
+            <div class="media-c-b">
+                <a class="media-btn media-btn-play" href="javascript:;"></a>
+            </div>
+            <div class="media-c-c">
+                <a href="javascript:;" class="media-re-btn usable">发送</a>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+
+
 <script>
     var $replyBtnAudio = $('.reply-btn-audio');
     var $replyBtnWrap = $('.reply-btn-wrap');
+    var $audioPublishDrop = $('.audio-publish-drop');
+    var $audioPublishWrap = $('.audio-publish-wrap');
+
+
     $('.main-reply-inner input').focus(function () {
         canText();
     }).blur(function () {
@@ -182,6 +259,23 @@
     function canText() {
         $replyBtnAudio.hide();
         $replyBtnWrap.show();
+    }
+
+    //录音
+    $replyBtnAudio.click(function(){
+        openAudioModel();
+    });
+    $('[data-toggle="close-audio-btn"]').click(function(){
+        closeAudioModel();
+    });
+
+    function openAudioModel() {
+        $audioPublishDrop.show();
+        $audioPublishWrap.show();
+    }
+    function closeAudioModel() {
+        $audioPublishDrop.hide();
+        $audioPublishWrap.hide();
     }
 
 
