@@ -2310,6 +2310,17 @@ a.cell-question-box:active {
   font-size: .24rem;
 }
 
+.live-img-box{
+  max-width: 4.2rem;
+  display: inline-block;
+  padding: .1rem;
+  background-color: #ffffff;
+  @include x-border-radius(0 .3rem .3rem .3rem);
+  img{
+    vertical-align: top;
+  }
+}
+
 .my-live-item {
   .live-hd {
     margin-right: 0;
@@ -2423,7 +2434,6 @@ a.cell-question-box:active {
     }
   }
   .reply-btn-wrap {
-    display: none;
     padding-left: .15rem;
     .reply-btn {
       display: block;

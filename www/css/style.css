@@ -27,6 +27,9 @@ body {
 ul, ol {
   list-style: none; }
 
+img {
+  max-width: 100%; }
+
 .m-t {
   margin-top: .12rem; }
 
@@ -2336,6 +2339,17 @@ a.cell-question-box:active {
   border-radius: 0 0.3rem 0.3rem 0.3rem;
   font-size: .24rem; }
 
+.live-img-box {
+  max-width: 4.2rem;
+  display: inline-block;
+  padding: .1rem;
+  background-color: #ffffff;
+  -moz-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  -webkit-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  border-radius: 0 0.3rem 0.3rem 0.3rem; }
+  .live-img-box img {
+    vertical-align: top; }
+
 .my-live-item .live-hd {
   margin-right: 0;
   margin-left: .2rem; }
@@ -2444,7 +2458,6 @@ a.cell-question-box:active {
     .jia-reply .reply-btn-audio i {
       top: 0; }
   .jia-reply .reply-btn-wrap {
-    display: none;
     padding-left: .15rem; }
     .jia-reply .reply-btn-wrap .reply-btn {
       display: block;
