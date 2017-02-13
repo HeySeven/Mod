@@ -2517,3 +2517,76 @@ a.cell-question-box:active {
   }
 }
 
+.live-ecode{
+  display: block;
+  width: 1.5rem;
+  margin: .1rem auto;
+}
+
+.live-card-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 6.4rem .5rem 0;
+  background: #5899d1 url(../images/yqk-card-bg.png) 0 0 no-repeat;
+  @include x-background-size(100%);
+  color: #ffffff;
+  overflow: auto;
+  h1{
+    line-height: .5rem;
+    min-height: 1rem;
+    font-size: .42rem;
+    margin-bottom: .3rem;
+  }
+  .card-media{
+    @include flexbox();
+    .card-media-hd{
+      width: 1.03rem;
+      height: 1.03rem;
+      margin-right: .3rem;
+      img{
+        vertical-align: top;
+        @include x-border-radius(.06rem);
+      }
+    }
+    .card-media-bd{
+      @include flex(1);
+      p{
+        font-size: .22rem;
+      }
+    }
+  }
+  .card-bottom{
+    margin-top: .5rem;
+    @include flexbox();
+    @include align-items(flex-end);
+    padding: 0 .1rem 0 .5rem;
+    dl{
+      @include flex(1);
+      padding-right: .4rem;
+      text-align: center;
+      dt{
+        margin: 0 auto .08rem;
+        width: 1.22rem;
+        height: 1.22rem;
+        padding: .1rem;
+        border: 1px solid #fff;
+      }
+      dd{
+        font-size: .12rem;
+      }
+    }
+    .card-bottom-phone{
+      @include flex(1);
+      img{
+        width: 1.3rem;
+      }
+    }
+  }
+}
+
+
+
+

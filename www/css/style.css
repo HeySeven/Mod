@@ -2533,4 +2533,89 @@ a.cell-question-box:active {
   .audio-publish-wrap .media-new {
     padding: .4rem .3rem .7rem; }
 
+.live-ecode {
+  display: block;
+  width: 1.5rem;
+  margin: .1rem auto; }
+
+.live-card-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 6.4rem .5rem 0;
+  background: #5899d1 url(../images/yqk-card-bg.png) 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  color: #ffffff;
+  overflow: auto; }
+  .live-card-wrap h1 {
+    line-height: .5rem;
+    min-height: 1rem;
+    font-size: .42rem;
+    margin-bottom: .3rem; }
+  .live-card-wrap .card-media {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    .live-card-wrap .card-media .card-media-hd {
+      width: 1.03rem;
+      height: 1.03rem;
+      margin-right: .3rem; }
+      .live-card-wrap .card-media .card-media-hd img {
+        vertical-align: top;
+        -moz-border-radius: 0.06rem;
+        -webkit-border-radius: 0.06rem;
+        border-radius: 0.06rem; }
+    .live-card-wrap .card-media .card-media-bd {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .live-card-wrap .card-media .card-media-bd p {
+        font-size: .22rem; }
+  .live-card-wrap .card-bottom {
+    margin-top: .5rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+    padding: 0 .1rem 0 .5rem; }
+    .live-card-wrap .card-bottom dl {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      padding-right: .4rem;
+      text-align: center; }
+      .live-card-wrap .card-bottom dl dt {
+        margin: 0 auto .08rem;
+        width: 1.22rem;
+        height: 1.22rem;
+        padding: .1rem;
+        border: 1px solid #fff; }
+      .live-card-wrap .card-bottom dl dd {
+        font-size: .12rem; }
+    .live-card-wrap .card-bottom .card-bottom-phone {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .live-card-wrap .card-bottom .card-bottom-phone img {
+        width: 1.3rem; }
+
 /*# sourceMappingURL=style.css.map */
