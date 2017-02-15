@@ -113,7 +113,7 @@
                     <div class="live-bd">
                         <div class="live-author-name">主讲人</div>
                         <div class="live-item-body">
-                            <div class="ui-audio-bar">
+                            <div class="ui-audio-bar no-play">
                                 <div class="ui-audio-progress">
                                     <div class="audio-progress-inner"></div>
                                 </div>
@@ -184,7 +184,6 @@
     function livePlay(el) {
         var eleAudio = el.children("audio").get(0);//音频js对象
         var audioDuration = eleAudio.duration;//音频时长
-
         //动画字符串
         var transString = "transition-duration:" +
                 audioDuration +
@@ -219,9 +218,19 @@
             $(eleAudio).siblings("i").attr("class", "iconfont icon-zanting1")
                     .closest(".ui-audio-bar").removeClass("playing")
                     .find(".audio-progress-inner").removeAttr("style");
-            ;//移除播放效果
+            //移除播放效果
+            var liveItem = el.closest(".live-item");
+            var liveItemNextAll = liveItem.nextAll(".live-item");
+            liveItemNextAll.each(function () {
+                var nextEle = $(this).find("[data-toggle='live-btn']");
+                if (nextEle.length !== 0) {
+                    livePlay(nextEle);
+                } else {
+                    return false;
+                }
+            });
         }
-    };
+    }
 
     $("body").on("click", "[data-toggle='live-btn']", function () {
         livePlay($(this));//播放音频

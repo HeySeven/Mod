@@ -2354,6 +2354,18 @@ a.cell-question-box:active {
       }
     }
   }
+  &.no-play{
+    &:after{
+      position: absolute;
+      top: .26rem;
+      right: -.15rem;
+      width: .1rem;
+      height: .1rem;
+      @include x-border-radius(50%);
+      background-color: #fa3f30;
+      content: "";
+    }
+  }
   .ui-audio-progress {
     height: .04rem;
     background-color: #bdbdbd;
@@ -2522,13 +2534,11 @@ a.cell-question-box:active {
   width: 1.5rem;
   margin: .1rem auto;
 }
-
+.live-card-container{
+  padding-bottom: 0;
+}
 .live-card-wrap{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
   padding: 6.4rem .5rem 0;
   background: #5899d1 url(../images/yqk-card-bg.png) 0 0 no-repeat;
   @include x-background-size(100%);

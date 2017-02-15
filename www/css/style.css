@@ -174,7 +174,11 @@ button.close {
   .alert-danger a {
     color: #ffffff; }
 
+.ng-scope {
+  height: 100%; }
+
 .container {
+  height: 100%;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 1.2rem;
   overflow-x: hidden; }
@@ -2376,6 +2380,17 @@ a.cell-question-box:active {
   border-radius: 0 0.3rem 0.3rem 0.3rem; }
   .ui-audio-bar.playing .ui-audio-progress .audio-progress-inner {
     width: 100%; }
+  .ui-audio-bar.no-play:after {
+    position: absolute;
+    top: .26rem;
+    right: -.15rem;
+    width: .1rem;
+    height: .1rem;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fa3f30;
+    content: ""; }
   .ui-audio-bar .ui-audio-progress {
     height: .04rem;
     background-color: #bdbdbd;
@@ -2538,12 +2553,11 @@ a.cell-question-box:active {
   width: 1.5rem;
   margin: .1rem auto; }
 
+.live-card-container {
+  padding-bottom: 0; }
+
 .live-card-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
   padding: 6.4rem .5rem 0;
   background: #5899d1 url(../images/yqk-card-bg.png) 0 0 no-repeat;
   -webkit-background-size: 100%;
