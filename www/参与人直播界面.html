@@ -128,6 +128,50 @@
                         </div>
                     </div>
                 </li>
+                <li class="live-item">
+                    <div class="live-hd">
+                        <img src="images/author.jpg" alt="">
+                    </div>
+                    <div class="live-bd">
+                        <div class="live-author-name">主讲人</div>
+                        <div class="live-item-body">
+                            <div class="ui-audio-bar no-play">
+                                <div class="ui-audio-progress">
+                                    <div class="audio-progress-inner"></div>
+                                </div>
+                                <div class="ui-audio-data">
+                                    <span>23″</span>
+                                </div>
+                                <a class="audio-btn" data-toggle="live-btn" href="javascript:;">
+                                    <i class="iconfont icon-zanting1"></i>
+                                    <audio preload="auto" src="images/636002265649091653.mp3"></audio>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="live-item">
+                    <div class="live-hd">
+                        <img src="images/author.jpg" alt="">
+                    </div>
+                    <div class="live-bd">
+                        <div class="live-author-name">主讲人</div>
+                        <div class="live-item-body">
+                            <div class="ui-audio-bar no-play">
+                                <div class="ui-audio-progress">
+                                    <div class="audio-progress-inner"></div>
+                                </div>
+                                <div class="ui-audio-data">
+                                    <span>23″</span>
+                                </div>
+                                <a class="audio-btn" data-toggle="live-btn" href="javascript:;">
+                                    <i class="iconfont icon-zanting1"></i>
+                                    <audio preload="auto" src="images/636002265649091653.mp3"></audio>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li class="live-item my-live-item">
                     <div class="live-bd">
                         <div class="live-author-name">二虎子</div>
@@ -174,6 +218,7 @@
         </div>
     </div>
 </div>
+<div class="mask-share"></div>
 <script>
     $('.show-all').click(function () {
         $(this).hide().prev('p').addClass('open');
@@ -182,6 +227,7 @@
     //音频播放方法定义
     var nowPlayingEleAudio = false;//页面中是否存在正在播放的音频
     function livePlay(el) {
+        console.log(el.closest(".live-item").scrollTop());
         var eleAudio = el.children("audio").get(0);//音频js对象
         var audioDuration = eleAudio.duration;//音频时长
         //动画字符串
@@ -225,6 +271,7 @@
                 var nextEle = $(this).find("[data-toggle='live-btn']");
                 if (nextEle.length !== 0) {
                     livePlay(nextEle);
+                    return false;
                 } else {
                     return false;
                 }

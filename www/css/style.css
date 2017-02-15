@@ -2352,6 +2352,7 @@ a.cell-question-box:active {
   -webkit-border-radius: 0 0.3rem 0.3rem 0.3rem;
   border-radius: 0 0.3rem 0.3rem 0.3rem; }
   .live-img-box img {
+    border-radius: 0 0.2rem 0.2rem 0.2rem;
     vertical-align: top; }
 
 .my-live-item .live-hd {
@@ -2631,5 +2632,18 @@ a.cell-question-box:active {
       flex: 1; }
       .live-card-wrap .card-bottom .card-bottom-phone img {
         width: 1.3rem; }
+
+.mask-share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../images/mask-share.png") right 10px no-repeat rgba(0, 0, 0, 0.7);
+  -webkit-background-size: 227px;
+  -moz-background-size: 227px;
+  -o-background-size: 227px;
+  background-size: 227px;
+  z-index: 502; }
 
 /*# sourceMappingURL=style.css.map */

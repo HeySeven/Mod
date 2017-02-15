@@ -2317,6 +2317,7 @@ a.cell-question-box:active {
   background-color: #ffffff;
   @include x-border-radius(0 .3rem .3rem .3rem);
   img{
+    border-radius: 0 0.2rem 0.2rem 0.2rem;
     vertical-align: top;
   }
 }
@@ -2597,6 +2598,15 @@ a.cell-question-box:active {
   }
 }
 
-
+.mask-share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../images/mask-share.png') right 10px no-repeat rgba(0, 0, 0, .7);
+  @include x-background-size(227px);
+  z-index: 502;
+}
 
 
