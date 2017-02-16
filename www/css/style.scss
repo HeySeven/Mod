@@ -2517,7 +2517,6 @@ a.cell-question-box:active {
   z-index: 11;
 }
 .audio-publish-wrap{
-  display: none;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -2599,7 +2598,7 @@ a.cell-question-box:active {
 }
 
 .mask-share {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
