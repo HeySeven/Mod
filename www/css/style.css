@@ -2524,7 +2524,6 @@ a.cell-question-box:active {
     border-radius: 0.6rem; }
 
 .audio-publish-drop {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -2640,5 +2639,8 @@ a.cell-question-box:active {
   -o-background-size: 227px;
   background-size: 227px;
   z-index: 502; }
+
+.audiojs {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

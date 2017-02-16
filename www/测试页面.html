@@ -13,6 +13,7 @@
     <script src="plugins/adaptive-version2.js"></script>
     <script src="weui/weui.js"></script>
     <script src="plugins/jquery-weui.js"></script>
+    <script src="plugins/audio.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -83,6 +84,7 @@
                         </div>
                     </div>
                 </li>
+                <audio preload="auto"></audio>
                 <li class="live-item">
                     <div class="live-hd">
                         <img src="images/author.jpg" alt="">
@@ -97,9 +99,9 @@
                                 <div class="ui-audio-data">
                                     <span>23″</span>
                                 </div>
-                                <a class="audio-btn" data-toggle="live-btn" href="javascript:;">
+                                <a class="audio-btn" data-toggle="live-btn" data-src="images/636002265649091653.mp3"
+                                   href="javascript:;">
                                     <i class="iconfont icon-zanting1"></i>
-                                    <audio preload="auto" src="images/636002265649091653.mp3"></audio>
                                 </a>
                             </div>
                         </div>
@@ -119,9 +121,9 @@
                                 <div class="ui-audio-data">
                                     <span>23″</span>
                                 </div>
-                                <a class="audio-btn" data-toggle="live-btn" href="javascript:;">
+                                <a class="audio-btn" data-toggle="live-btn" data-src="images/636002265649091653.mp3"
+                                   href="javascript:;">
                                     <i class="iconfont icon-zanting1"></i>
-                                    <audio preload="auto" src="images/636002265649091653.mp3"></audio>
                                 </a>
                             </div>
                         </div>
@@ -141,9 +143,9 @@
                                 <div class="ui-audio-data">
                                     <span>23″</span>
                                 </div>
-                                <a class="audio-btn" data-toggle="live-btn" href="javascript:;">
+                                <a class="audio-btn" data-toggle="live-btn" data-src="images/636002265649091653.mp3"
+                                   href="javascript:;">
                                     <i class="iconfont icon-zanting1"></i>
-                                    <audio preload="auto" src="images/636002265649091653.mp3"></audio>
                                 </a>
                             </div>
                         </div>
@@ -163,9 +165,9 @@
                                 <div class="ui-audio-data">
                                     <span>23″</span>
                                 </div>
-                                <a class="audio-btn" data-toggle="live-btn" href="javascript:;">
+                                <a class="audio-btn" data-toggle="live-btn" data-src="images/636002265649091653.mp3"
+                                   href="javascript:;">
                                     <i class="iconfont icon-zanting1"></i>
-                                    <audio preload="auto" src="images/636002265649091653.mp3"></audio>
                                 </a>
                             </div>
                         </div>
@@ -218,68 +220,60 @@
     </div>
 </div>
 <script>
-    $('.show-all').click(function () {
-        $(this).hide().prev('p').addClass('open');
-    });
-
-    //音频播放方法定义
-    var nowPlayingEleAudio = false;//页面中是否存在正在播放的音频
-    function livePlay(el) {
-        console.log(el.closest(".live-item").scrollTop());
-        var eleAudio = el.children("audio").get(0);//音频js对象
-        var audioDuration = eleAudio.duration;//音频时长
-        //动画字符串
-        var transString = "transition-duration:" +
-                audioDuration +
-                "s;-webkit-transition-duration:" + audioDuration + "s";
-        //播放时关闭其他音频
-        if (nowPlayingEleAudio && nowPlayingEleAudio != eleAudio) {
-            nowPlayingEleAudio.pause();
-            nowPlayingEleAudio.currentTime = 0;
-            $(nowPlayingEleAudio).siblings("i").attr("class", "iconfont icon-zanting1")
-                    .closest(".ui-audio-bar").removeClass("playing")
-                    .find(".audio-progress-inner").removeAttr("style");
+    $(function () {
+        function playStatus($this,duration) {
+            $this.addClass("playing")
+                    .children("i").attr("class", "iconfont icon-bofang2");
+            var $progress = $this.siblings(".ui-audio-progress").children(".audio-progress-inner");
+                $progress.css("width", "100%");
         }
 
-
-        if (eleAudio.paused) {  //如果暂停,则播放
-            eleAudio.play();
-            $(eleAudio).siblings("i").attr("class", "iconfont icon-bofang2")
-                    .closest(".ui-audio-bar").addClass("playing")
-                    .find(".audio-progress-inner").attr("style", transString);
-            nowPlayingEleAudio = eleAudio;
-        } else {  //如果播放,则暂停
-            eleAudio.pause();
-            eleAudio.currentTime = 0;
-            $(eleAudio).siblings("i").attr("class", "iconfont icon-zanting1")
-                    .closest(".ui-audio-bar").removeClass("playing")
-                    .find(".audio-progress-inner").removeAttr("style");
-            ;
+        function stopStatus($this) {
+            $this.removeClass("playing")
+                    .children("i").attr("class", "iconfont icon-zanting1")
+            $this.siblings(".ui-audio-progress")
+                    .children(".audio-progress-inner").css("width", "0%");
         }
 
-        //播放完毕时
-        eleAudio.onended = function () {
-            $(eleAudio).siblings("i").attr("class", "iconfont icon-zanting1")
-                    .closest(".ui-audio-bar").removeClass("playing")
-                    .find(".audio-progress-inner").removeAttr("style");
-            //移除播放效果
-            var liveItem = el.closest(".live-item");
-            var liveItemNextAll = liveItem.nextAll(".live-item");
-            liveItemNextAll.each(function () {
-                var nextEle = $(this).find("[data-toggle='live-btn']");
-                if (nextEle.length !== 0) {
-                    livePlay(nextEle);
-                    return false;
-                } else {
-                    return false;
+        audiojs.events.ready(function () {
+            var a = audiojs.createAll({
+                trackEnded: function() {
+                    var $now = $("[data-toggle='live-btn'].playing");
+                    var $next = $now.closest(".live-item")
+                            .next(".live-item")
+                            .find("[data-toggle='live-btn']");
+                    stopStatus($now);
+                    if ($next.length){
+                        audio.load($next.attr('data-src'));
+                        playStatus($next, audio.duration);
+                        audio.play();
+                    }
                 }
             });
-        }
-    }
+            var audio = a[0];
+            first = $("[data-toggle='live-btn']").attr('data-src');
+            audio.load(first);
+            $("body").on("click", "[data-toggle='live-btn']", function (e) {
+                var $this = $(this);
+                e.preventDefault();
+                //播放音频
+                audio.load($this.attr('data-src'));
+                if(!$this.hasClass("playing")){
+                    audio.play();
+                    var $nowPlay = $("[data-toggle='live-btn'].playing");
+                    stopStatus($nowPlay);
+                    playStatus($(this), audio.duration);
+                    console.log(audio)
+                }else{
+                    audio.pause();
+                    stopStatus($this);
+                }
 
-    $("body").on("click", "[data-toggle='live-btn']", function () {
-        livePlay($(this));//播放音频
+            });
+        });
     });
+
 </script>
+
 </body>
 </html>
