@@ -174,11 +174,7 @@ button.close {
   .alert-danger a {
     color: #ffffff; }
 
-.ng-scope {
-  height: 100%; }
-
 .container {
-  height: 100%;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 1.2rem;
   overflow-x: hidden; }
@@ -2558,7 +2554,7 @@ a.cell-question-box:active {
   padding-bottom: 0; }
 
 .live-card-wrap {
-  height: 100%;
+  min-height: 568px;
   padding: 6.4rem .5rem 0;
   background: #5899d1 url(../images/yqk-card-bg.png) 0 0 no-repeat;
   -webkit-background-size: 100%;
