@@ -271,6 +271,11 @@
 
             });
         });
+        // 回到播放位置
+        $('.back-to-wrap').click(function(){
+            var $nowPlayIng = $('[data-toggle="live-btn"].playing').closest('.live-item');
+            $(window).scrollTop($nowPlayIng.offset().top);
+        });
     });
 
 </script>
