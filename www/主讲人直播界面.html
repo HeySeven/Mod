@@ -76,7 +76,7 @@
                         <div class="live-author-name">主讲人</div>
                         <div class="live-item-body">
                             <div class="live-img-box">
-                                <img src="images/topic.jpg" alt="">
+                                <a href="images/topic.jpg"><img src="images/topic.jpg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -258,8 +258,10 @@
 
 
     $('.main-reply-inner input').focus(function () {
+        $('html').addClass('overflow-hidden');
         canText();
     }).blur(function () {
+        $('html').removeClass('overflow-hidden');
         if ($(this).val() == 0) {
             canNotText();
         }

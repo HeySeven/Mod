@@ -74,7 +74,10 @@ body {
   background-color: #f5f5f5;
   font-size: $fz-sm;
 }
-
+html.overflow-hidden, html.overflow-hidden body{
+  height: 100%;
+  overflow: hidden;
+}
 ul, ol {
   list-style: none;
 }

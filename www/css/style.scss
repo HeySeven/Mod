@@ -2548,8 +2548,12 @@ a.cell-question-box:active {
     min-height: 1rem;
     font-size: .42rem;
     margin-bottom: .3rem;
+    text-align: center;
   }
   .card-media{
+    padding: .1rem .15rem;
+    background: rgba(255, 255, 255, 0.3);
+    @include x-border-radius(.06rem);
     @include flexbox();
     .card-media-hd{
       width: 1.03rem;

@@ -24,6 +24,10 @@ body {
   background-color: #f5f5f5;
   font-size: 0.28rem; }
 
+html.overflow-hidden, html.overflow-hidden body {
+  height: 100%;
+  overflow: hidden; }
+
 ul, ol {
   list-style: none; }
 
@@ -2565,8 +2569,14 @@ a.cell-question-box:active {
     line-height: .5rem;
     min-height: 1rem;
     font-size: .42rem;
-    margin-bottom: .3rem; }
+    margin-bottom: .3rem;
+    text-align: center; }
   .live-card-wrap .card-media {
+    padding: .1rem .15rem;
+    background: rgba(255, 255, 255, 0.3);
+    -moz-border-radius: 0.06rem;
+    -webkit-border-radius: 0.06rem;
+    border-radius: 0.06rem;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;

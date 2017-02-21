@@ -221,7 +221,11 @@
     $('.show-all').click(function () {
         $(this).hide().prev('p').addClass('open');
     });
-
+    $('.jia-reply-inner input').focus(function () {
+        $('html').addClass('overflow-hidden');
+    }).blur(function () {
+        $('html').removeClass('overflow-hidden');
+    });
     //音频播放方法定义
     var nowPlayingEleAudio = false;//页面中是否存在正在播放的音频
     function livePlay(el) {
