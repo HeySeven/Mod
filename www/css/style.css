@@ -1733,7 +1733,8 @@ a.cell-question-box:active {
 .fix-btn-text ul li a {
   height: .84rem;
   padding: 0;
-  line-height: .84rem; }
+  line-height: .84rem;
+  font-size: 0.28rem; }
 
 .swiper-slide img {
   display: block;
@@ -2816,5 +2817,17 @@ a.cell-question-box:active {
       color: #828283;
       font-size: 0.28rem;
       display: block; }
+
+.no-msg {
+  background: #ffffff;
+  text-align: center;
+  color: #c3c3c3;
+  padding: .9rem 0 1.6rem; }
+  .no-msg dl {
+    margin-bottom: .5rem; }
+    .no-msg dl dt i {
+      font-size: 1.5rem; }
+    .no-msg dl dd {
+      font-size: 0.28rem; }
 
 /*# sourceMappingURL=style.css.map */
