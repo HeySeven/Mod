@@ -15,15 +15,9 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+<div class="fixed-search"></div>
 <div class="container">
     <div class="find-user">
-        <div class="index-header">
-            <ul>
-                <li><a href="#">收听</a></li>
-                <li class="active"><a href="#">找人</a></li>
-                <li><a href="#">广场</a></li>
-            </ul>
-        </div>
         <div class="user-category">
             <ul class="category-list">
                 <li><a href="###">求职</a></li>
@@ -52,9 +46,9 @@
                                     <p class="weui_media_desc">45个回答 ｜1652人收听  </p>
                                 </div>
                             </a>
-                            <a href="#" class="st-wrap">
+                            <a href="#" class="st-wrap active">
                                 <i class="iconfont icon-shitingliang"></i>
-                                <span>关注</span>
+                                <span>取消</span>
                             </a>
                         </div>
                         <div class="has-r-st">
@@ -157,21 +151,24 @@
         </div>
     </div>
 </div>
-<div class="fix-btn-box ui-border-t">
+<div class="fix-btn-box fix-btn-text ui-border-t">
     <ul>
         <li class="active">
-            <a href="#">热门</a>
+            <a href="#">问答</a>
         </li>
         <li>
-            <a href="#">发现</a>
+            <a href="#">找人</a>
         </li>
         <li>
-            <a href="#">广场</a>
+            <a href="#">直播</a>
         </li>
         <li>
             <a href="#">我的</a>
         </li>
     </ul>
 </div>
+<script>
+    $(".fixed-search").searchBar();
+</script>
 </body>
 </html>
