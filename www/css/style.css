@@ -2375,7 +2375,7 @@ a.cell-question-box:active {
   position: relative;
   width: 3.6rem;
   height: .6rem;
-  padding: .28rem .82rem 0 .6rem;
+  padding: .26rem .82rem 0 .6rem;
   background-color: #fff;
   -moz-border-radius: 0 0.3rem 0.3rem 0.3rem;
   -webkit-border-radius: 0 0.3rem 0.3rem 0.3rem;
@@ -2394,7 +2394,7 @@ a.cell-question-box:active {
     background-color: #fa3f30;
     content: ""; }
   .ui-audio-bar .ui-audio-progress {
-    height: 2px;
+    height: 3px;
     background-color: #bdbdbd;
     -moz-border-radius: 0.2rem;
     -webkit-border-radius: 0.2rem;
