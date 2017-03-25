@@ -2835,3 +2835,128 @@ a.cell-question-box:active {
 
   }
 }
+
+.menu-box{
+  .weui_cells{
+    margin-top: 0;
+    &:before{
+      display: none;
+    }
+  }
+  .weui_cell{
+    &:first-child{
+      .weui_cell_hd{
+        background-color: #77c072;
+      }
+    }
+    &:nth-child(2){
+      .weui_cell_hd{
+        background-color: #f88937;
+      }
+    }
+    &:nth-child(3){
+      .weui_cell_hd{
+        background-color: #a6a1f7;
+      }
+    }
+    &:nth-child(4){
+      .weui_cell_hd{
+        background-color: #fc6864;
+      }
+    }
+  }
+  .weui_cell_hd{
+    text-align: center;
+    width: .7rem;
+    height: .7rem;
+    line-height:.7rem;
+    margin-right: .2rem;
+    @include x-border-radius(50%);
+    color: #ffffff;
+  }
+  .weui_cell_bd{
+    font-size: $fz-sm;
+    color: $light-color;
+  }
+  .weui_cell_ft{
+    font-size: $fz-sm;
+    color: $light-color;
+    &:after{
+      width: 10px;
+      height: 10px;
+      border-width: 1px 1px 0 0;
+    }
+  }
+}
+.hot-topic{
+  background-color: #ffffff;
+}
+.topic-header{
+  padding: .2rem .25rem;
+  font-size: .34rem;
+}
+.topic-body{
+  padding: 0 .25rem;
+}
+.topic-list{
+  li{
+    & + li{
+      margin-top: .2rem;
+    }
+    .topic-link{
+      display: block;
+      height: 2.56rem;
+      background-position: center;
+      @include x-background-size(cover);
+      @include x-border-radius(2px);
+    }
+  }
+}
+.user-haha{
+  .has-r-st{
+    .weui_media_hd{
+      i.iconfont{
+        font-size: .52rem;
+      }
+    }
+    &:nth-child(1){
+      .weui_media_hd{
+        i.iconfont{
+          color: #77c071;
+        }
+      }
+    }
+    &:nth-child(2){
+      .weui_media_hd{
+        i.iconfont{
+          color: #f88937;
+        }
+      }
+    }
+    &:nth-child(3){
+      .weui_media_hd{
+        i.iconfont{
+          color: #fc6864;
+        }
+      }
+    }
+    &:nth-child(4){
+      .weui_media_hd{
+        i.iconfont{
+          color: #a6a1f7;
+        }
+      }
+    }
+    .weui_media_title{
+      font-size: .26rem!important;
+      color: #646466!important;
+    }
+  }
+  .st-wrap{
+    border: 1px solid #f88937;
+    font-size: .2rem;
+    padding: 0 .2rem;
+    color: #f88937!important;
+    @include x-border-radius(.2rem);
+  }
+}

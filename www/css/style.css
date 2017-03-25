@@ -37,6 +37,9 @@ img {
 .m-t {
   margin-top: .12rem; }
 
+.m-t-n {
+  margin-top: 0 !important; }
+
 .m-b {
   margin-bottom: .12rem; }
 
@@ -2829,5 +2832,84 @@ a.cell-question-box:active {
       font-size: 1.5rem; }
     .no-msg dl dd {
       font-size: 0.28rem; }
+
+.menu-box .weui_cells {
+  margin-top: 0; }
+  .menu-box .weui_cells:before {
+    display: none; }
+.menu-box .weui_cell:first-child .weui_cell_hd {
+  background-color: #77c072; }
+.menu-box .weui_cell:nth-child(2) .weui_cell_hd {
+  background-color: #f88937; }
+.menu-box .weui_cell:nth-child(3) .weui_cell_hd {
+  background-color: #a6a1f7; }
+.menu-box .weui_cell:nth-child(4) .weui_cell_hd {
+  background-color: #fc6864; }
+.menu-box .weui_cell_hd {
+  text-align: center;
+  width: .7rem;
+  height: .7rem;
+  line-height: .7rem;
+  margin-right: .2rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff; }
+.menu-box .weui_cell_bd {
+  font-size: 0.28rem;
+  color: #898989; }
+.menu-box .weui_cell_ft {
+  font-size: 0.28rem;
+  color: #898989; }
+  .menu-box .weui_cell_ft:after {
+    width: 10px;
+    height: 10px;
+    border-width: 1px 1px 0 0; }
+
+.hot-topic {
+  background-color: #ffffff; }
+
+.topic-header {
+  padding: .2rem .25rem;
+  font-size: .34rem; }
+
+.topic-body {
+  padding: 0 .25rem; }
+
+.topic-list li + li {
+  margin-top: .2rem; }
+.topic-list li .topic-link {
+  display: block;
+  height: 2.56rem;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
+
+.user-haha .has-r-st .weui_media_hd i.iconfont {
+  font-size: .52rem; }
+.user-haha .has-r-st:nth-child(1) .weui_media_hd i.iconfont {
+  color: #77c071; }
+.user-haha .has-r-st:nth-child(2) .weui_media_hd i.iconfont {
+  color: #f88937; }
+.user-haha .has-r-st:nth-child(3) .weui_media_hd i.iconfont {
+  color: #fc6864; }
+.user-haha .has-r-st:nth-child(4) .weui_media_hd i.iconfont {
+  color: #a6a1f7; }
+.user-haha .has-r-st .weui_media_title {
+  font-size: 0.26rem !important;
+  color: #646466 !important; }
+.user-haha .st-wrap {
+  border: 1px solid #f88937;
+  font-size: .20rem;
+  padding: 0 .2rem;
+  color: #f88937 !important;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem; }
 
 /*# sourceMappingURL=style.css.map */
